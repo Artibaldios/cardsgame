@@ -1,0 +1,101 @@
+.card {
+    position: relative;
+    color: #3a3a3a;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.card-info{
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 28px;
+}
+
+.card img {
+    height: 120px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.live{
+    color: #3a3a3a;
+}
+.killed{
+    filter: brightness(50%);
+}
+.diagonal-text{
+    position: absolute;
+    color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 51px;
+    font-weight: 800;
+}
+
+.highlighted{
+    background-color: orange;
+}
+@media (max-width: 992px) {
+    .card-info {
+        font-size: 24px;
+    }
+    .diagonal-text{
+        font-size: 36px;
+    }
+    .card img {
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-info {
+        font-size: 18px;
+    }
+    .diagonal-text{
+        font-size: 28px;
+    }
+    .card img {
+        height: 100px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .card {
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+    }
+    .card-info {
+        font-size: 14px;
+    }
+    .card img {
+        width: 100%;
+    }
+    .card:hover {
+        transform: scale(1);
+    }
+    .killed{
+        filter: brightness(50%);
+        color: #3a3a3a;
+    }
+    .diagonal-text{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card img {
+        height: 80px;
+        width: 100%;
+    }
+}

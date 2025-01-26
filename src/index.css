@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  color: #3a3a3a;
+}
+
+.content {
+  opacity: 1;
+  transition: opacity 1s ;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+h3,h1,ul{
+  padding: 0;
+  margin: 0;
+}
+.loader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.killed-info{
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.buttons-wrapper{
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  margin: auto;
+}
+
+.main-buttons{
+  border: 0;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  padding: 10px;
+  touch-action: manipulation;
+  border: 2px solid black;
+}
+button:disabled{
+  background-color: #3a3a3a;
+}
+button:focus {
+  outline: 0;
+}
+
+button:after {
+  content: '';
+  position: absolute;
+  border: 2px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  button{
+    padding: 10px;
+    font-size: 1.25rem;
+    border: 2px solid black;
+  }
+  .buttons-wrapper{
+    gap: 30px;
+  }
+}
+.touch-button{
+  display: none;
+}
+@media (max-width: 768px) {
+  .touch-button{
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+  }
+}
+@media (max-width: 480px) {
+  .buttons-wrapper{
+    padding: 0px;
+    margin-top: auto;
+    margin-bottom: 30px;
+  }
+  .main-buttons{
+    font-size: 14px;
+  }
+  .buttons-wrapper{
+    gap: 10px;
+  }
+}
