@@ -1,9 +1,8 @@
 {
-  "name": "cardgame",
+  "name": "cardsgame",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Artibaldios.github.io/cardGame",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -34,5 +33,6 @@
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5"
-  }
+  },
+  "homepage": "https://Artibaldios.github.io/cardsgame"
 }
