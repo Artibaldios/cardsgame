@@ -18,26 +18,97 @@ body {
 }
 
 .message-container {
+    width: min(520px, calc(100% - 32px));
+    box-sizing: border-box;
     background-color: #3a3a3a;
-    padding: 30px;
-    margin: 10px;
-    border-radius: 8px;
+    padding: 28px 30px 24px;
+    margin: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
-.message-container h2{
+
+.rules-eyebrow {
+    margin: 0 0 8px;
+    color: #bdbdbd;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     text-align: center;
 }
+
+.message-container h2 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.rules-intro {
+    margin: 12px 0 20px;
+    color: #f0f0f0;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.rules-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding-left: 28px;
+    color: #ffffff;
+    line-height: 1.45;
+}
+
+.rules-list li {
+    padding-left: 4px;
+}
+
+.rules-list li::marker {
+    color: #8ecdf2;
+    font-weight: 700;
+}
+
+.rules-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
 .close-button,
 .translate-button {
-    margin: 20px;
+    margin: 0;
     padding: 10px 15px;
     border: 0;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.close-button,.translate-button {
+.close-button,
+.translate-button {
     background-color: #fff;
     color: #000;
-    border: none;
+}
+
+.translate-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+@media (max-width: 480px) {
+    .message-container {
+        padding: 24px 20px 20px;
+    }
+
+    .rules-actions {
+        flex-direction: column;
+    }
+
+    .close-button,
+    .translate-button {
+        width: 100%;
+    }
 }
